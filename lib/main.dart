@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Flutter Simple Login Demo',
       theme: new ThemeData(
-        primarySwatch: Colors.blue
+        primarySwatch: Colors.green,
       ),
       home: new LoginPage(),
     );
@@ -86,6 +86,7 @@ class _LoginPageState extends State<LoginPage> {
     return new AppBar(
       title: new Text("Simple Login Example"),
       centerTitle: true,
+      toolbarOpacity: .50,
     );
   }
 
@@ -161,7 +162,8 @@ class _LoginPageState extends State<LoginPage> {
 
   void _createAccountPressed () {
     print('The user wants to create an accoutn with $_email and $_password');
-
+    _passwordFilter.text = "";
+    _emailFilter.text = "";
   }
 
   void _passwordReset () {
