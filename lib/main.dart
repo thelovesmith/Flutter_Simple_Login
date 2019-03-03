@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -84,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _buildBar(BuildContext context) {
     return new AppBar(
-      title: new Text("Simple Login Example"),
+      title: new Text("Island Stream"),
       centerTitle: true,
       toolbarOpacity: .50,
     );
@@ -158,6 +159,8 @@ class _LoginPageState extends State<LoginPage> {
 
   void _loginPressed () {
     print('The user wants to login with $_email and $_password');
+     _passwordFilter.text = "";
+    _emailFilter.text = "";
   }
 
   void _createAccountPressed () {
